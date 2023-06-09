@@ -1,0 +1,3 @@
+# TpPython_Nahuel
+#formulario de entrada que ingresa una tanda de datos de tres lineas .. crece en columnas y lo guarda en un excel.
+#se que se puede mejorar ... proximos pasos ...
