@@ -48,13 +48,13 @@ num_columnas_entry.grid(row=1, column=1)
 
 # Obtener los datos ingresados en las cajas de texto
 #seccion de Nombre
-nombre_label= tk.Label(ventana, text="Ingresa tu Apellido:")
+nombre_label= tk.Label(ventana, text="Ingresar el Apellido:")
 nombre_label.grid(row=2, column=0)
-nombre_label= tk.Label(ventana, text="Ingresa tu Nombre:")
+nombre_label= tk.Label(ventana, text="Ingresar el Nombre:")
 nombre_label.grid(row=3, column=0)
 #nombre_label.config(padx=10, pady=10)
 #seccion de Telefono
-nombre_label= tk.Label(ventana, text="Ingresa tu Telefono:")
+nombre_label= tk.Label(ventana, text="Ingresar el Telefono:")
 nombre_label.grid(row=4, column=0)
 
 
@@ -67,16 +67,16 @@ def crear_cajas_texto():
             caja_texto = tk.Entry(ventana)
             caja_texto.grid(row=row+2, column=col+1)# le sume valores para que inicien la creacion de las cajitas luego de la primer columna de texto ... 
             cajas_texto[row].append(caja_texto)
-
+            caja_texto.delete(0, tk.END)
  #FRAME DE ENTRADA DE DATOS
 
 bienvenido = tk.Label(ventana, text="BIENVENIDOS")
 bienvenido.grid(row=0, column=0, columnspan = 2)
 bienvenido.config(font=('Arial', 16))
 
-# Crear el botón para crear las cajas de texto
+# Crear el botón para crear las cajas de texto lo deje fijo ...arriba asi no queda detras del area a ingresar datos
 crear_button = tk.Button(ventana, text="Crear lugar de ingreso de data", command=crear_cajas_texto)
-crear_button.grid(row=3, column=3, columnspan = 2)
+crear_button.grid(row=1, column=2, columnspan = 2)
 
 # Crear las cajas de texto iniciales
 cajas_texto = [[] for _ in range(3)]
